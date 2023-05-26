@@ -7,6 +7,7 @@ export interface Components {
 }
 
 export class Component extends fabric.Object implements Components {
+
   connections: Connector[] = [];
 
   constructor() {
@@ -18,5 +19,9 @@ export class Component extends fabric.Object implements Components {
     const fabricObject = new fabric.Object();
 
     return fabricObject;
+  }
+
+  createFabricObjectWithEvent(componentType: string, event : DragEvent) {
+    throw new Error('Method not implemented.');
   }
 }

@@ -200,7 +200,7 @@ function handleDrop(this: HTMLElement, e: DragEvent): boolean {
     console.log("id for image is", img.getAttribute("id"));
     const componentType : string  = img.getAttribute("id") as string;
     // const newImage = createFabricObject(componentType);
-    // const image = createFabricObject2(componentType, e);
+    const image = createFabricObject(componentType, e);
 
     
 
@@ -334,11 +334,13 @@ if (canvasContainer) {
    
   }
 
-  createFabricObject(componentType : string): fabric.Object{
-    // return this.componentFactory.createComponent();
-    return new fabric.Object;
+  createFabricObject(componentType : string, event: DragEvent): fabric.Object{
+    return this.componentFactory.;
+    
     
   }
+
+
 
   showServerData(){
     this.helloworldService.getServerResponse()
